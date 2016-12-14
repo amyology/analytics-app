@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
   
   def index
-    ahoy.track "Visit Index"
+    # ahoy.track "Visit Index"
+    @visits = Visit.all
   end
 
   def show
