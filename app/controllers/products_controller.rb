@@ -1,12 +1,13 @@
 class ProductsController < ApplicationController
   
   def index
-    # ahoy.track "Visit Index"
+    # ahoy.track "Index visit"
     @visits = Visit.all
   end
 
   def show
     @product = Product.find(params[:id])
+    ahoy.track @product.product_name
   end
 
   def create

@@ -1,16 +1,14 @@
-<p>
-  <% @visits.each do |visit| %>
-    Visit Number: <%= visit.id %><br>
-    Visit Token: <%= visit.visit_token %><br>
-    Visitor Token: <%= visit.visitor_token %><br>
-    IP: <%= visit.ip %><br>
-    User Agent: <%= visit.user_agent %><br>
-    Device Type: <%= visit.device_type %><br>
-    Country: <%= visit.country %><br>
-    Region: <%= visit.region %><br>
-    City: <%= visit.city %><br>
-    Postal Code: <%= visit.postal_code %><br>
-    Latitude: <%= visit.latitude %><br>
-    Longitude: <%= visit.longitude %><br>
-  <% end %>
-</p>
+<% @visits.each do |visit| %>
+  Visit Number: <%= visit.id %><br>
+  Visit Token: <%= visit.visit_token %><br>
+  Visitor Token: <%= visit.visitor_token %><br>
+  IP: <%= visit.ip %><br>
+  User Agent: <%= visit.user_agent %><br>
+  Device Type: <%= visit.device_type %><br>
+  Country: <%= visit.country %><br>
+  Region: <%= visit.region %><br>
+  City: <%= visit.city %><br>
+  Postal Code: <%= visit.postal_code %><br>
+  Latitude: <%= visit.latitude %><br>
+  Longitude: <%= visit.longitude %><br><br>
+<% end %>
