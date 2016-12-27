@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161214175121) do
+ActiveRecord::Schema.define(version: 20161227173823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20161214175121) do
     t.string   "name"
     t.jsonb    "properties"
     t.datetime "time"
+    t.string   "device_unique_id"
     t.index ["name", "time"], name: "index_ahoy_events_on_name_and_time", using: :btree
     t.index ["user_id", "name"], name: "index_ahoy_events_on_user_id_and_name", using: :btree
     t.index ["visit_id", "name"], name: "index_ahoy_events_on_visit_id_and_name", using: :btree
@@ -62,6 +63,7 @@ ActiveRecord::Schema.define(version: 20161214175121) do
     t.string   "utm_content"
     t.string   "utm_campaign"
     t.datetime "started_at"
+    t.string   "device_unique_id"
     t.index ["user_id"], name: "index_visits_on_user_id", using: :btree
     t.index ["visit_token"], name: "index_visits_on_visit_token", unique: true, using: :btree
   end
